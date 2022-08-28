@@ -11,6 +11,13 @@
 		BAC315F628BA985F00FB965F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC315F528BA985F00FB965F /* ContentView.swift */; };
 		BAC315F828BA986300FB965F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BAC315F728BA986300FB965F /* Assets.xcassets */; };
 		BAC315FB28BA986300FB965F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BAC315FA28BA986300FB965F /* Preview Assets.xcassets */; };
+		BAC3160228BAA0EF00FB965F /* AspectVGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC3160128BAA0EF00FB965F /* AspectVGrid.swift */; };
+		BAC3160428BAA25C00FB965F /* SetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC3160328BAA25C00FB965F /* SetViewModel.swift */; };
+		BAC3160628BAA2DB00FB965F /* SetModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC3160528BAA2DB00FB965F /* SetModel.swift */; };
+		BAC3160928BAD6BB00FB965F /* Rectangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC3160828BAD6BB00FB965F /* Rectangle.swift */; };
+		BAC3160B28BAD6C900FB965F /* Triangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC3160A28BAD6C900FB965F /* Triangle.swift */; };
+		BAC3160D28BAD6D800FB965F /* Diamond.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC3160C28BAD6D800FB965F /* Diamond.swift */; };
+		BAC3160F28BADB0800FB965F /* CardContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC3160E28BADB0800FB965F /* CardContent.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +26,13 @@
 		BAC315F528BA985F00FB965F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		BAC315F728BA986300FB965F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BAC315FA28BA986300FB965F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		BAC3160128BAA0EF00FB965F /* AspectVGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AspectVGrid.swift; sourceTree = "<group>"; };
+		BAC3160328BAA25C00FB965F /* SetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetViewModel.swift; sourceTree = "<group>"; };
+		BAC3160528BAA2DB00FB965F /* SetModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetModel.swift; sourceTree = "<group>"; };
+		BAC3160828BAD6BB00FB965F /* Rectangle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rectangle.swift; sourceTree = "<group>"; };
+		BAC3160A28BAD6C900FB965F /* Triangle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Triangle.swift; sourceTree = "<group>"; };
+		BAC3160C28BAD6D800FB965F /* Diamond.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Diamond.swift; sourceTree = "<group>"; };
+		BAC3160E28BADB0800FB965F /* CardContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardContent.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,10 +65,15 @@
 		BAC315F228BA985F00FB965F /* Set */ = {
 			isa = PBXGroup;
 			children = (
+				BAC3160728BAD69A00FB965F /* SetCardFigures */,
+				BAC3160528BAA2DB00FB965F /* SetModel.swift */,
+				BAC3160328BAA25C00FB965F /* SetViewModel.swift */,
+				BAC3160128BAA0EF00FB965F /* AspectVGrid.swift */,
 				BAC315F328BA985F00FB965F /* SetApp.swift */,
 				BAC315F528BA985F00FB965F /* ContentView.swift */,
 				BAC315F728BA986300FB965F /* Assets.xcassets */,
 				BAC315F928BA986300FB965F /* Preview Content */,
+				BAC3160E28BADB0800FB965F /* CardContent.swift */,
 			);
 			path = Set;
 			sourceTree = "<group>";
@@ -65,6 +84,16 @@
 				BAC315FA28BA986300FB965F /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		BAC3160728BAD69A00FB965F /* SetCardFigures */ = {
+			isa = PBXGroup;
+			children = (
+				BAC3160828BAD6BB00FB965F /* Rectangle.swift */,
+				BAC3160A28BAD6C900FB965F /* Triangle.swift */,
+				BAC3160C28BAD6D800FB965F /* Diamond.swift */,
+			);
+			path = SetCardFigures;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,7 +167,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				BAC315F628BA985F00FB965F /* ContentView.swift in Sources */,
+				BAC3160428BAA25C00FB965F /* SetViewModel.swift in Sources */,
+				BAC3160628BAA2DB00FB965F /* SetModel.swift in Sources */,
+				BAC3160928BAD6BB00FB965F /* Rectangle.swift in Sources */,
+				BAC3160D28BAD6D800FB965F /* Diamond.swift in Sources */,
 				BAC315F428BA985F00FB965F /* SetApp.swift in Sources */,
+				BAC3160F28BADB0800FB965F /* CardContent.swift in Sources */,
+				BAC3160B28BAD6C900FB965F /* Triangle.swift in Sources */,
+				BAC3160228BAA0EF00FB965F /* AspectVGrid.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
