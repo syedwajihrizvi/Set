@@ -6,14 +6,19 @@
 //
 
 import Foundation
+import SwiftUI
 
-struct CardContent: Equatable {
+struct SetCardContent: Equatable {
     var number: Int
-    var shading: Int
+    var shading: Double
     var shape: String
-    var color: String
+    var color: Color
     
-    static func == (lhs: CardContent, rhs: CardContent) -> Bool {
+    static func isSet() -> Bool {
+        return true
+    }
+    
+    static func == (lhs: SetCardContent, rhs: SetCardContent) -> Bool {
         return lhs.shape == rhs.shape &&
         lhs.number == rhs.number &&
         lhs.shading == rhs.shading &&

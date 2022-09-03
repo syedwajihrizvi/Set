@@ -17,7 +17,7 @@
 		BAC3160928BAD6BB00FB965F /* Rectangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC3160828BAD6BB00FB965F /* Rectangle.swift */; };
 		BAC3160B28BAD6C900FB965F /* Triangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC3160A28BAD6C900FB965F /* Triangle.swift */; };
 		BAC3160D28BAD6D800FB965F /* Diamond.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC3160C28BAD6D800FB965F /* Diamond.swift */; };
-		BAC3160F28BADB0800FB965F /* CardContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC3160E28BADB0800FB965F /* CardContent.swift */; };
+		BAC3160F28BADB0800FB965F /* SetCardContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC3160E28BADB0800FB965F /* SetCardContent.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,7 +32,7 @@
 		BAC3160828BAD6BB00FB965F /* Rectangle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rectangle.swift; sourceTree = "<group>"; };
 		BAC3160A28BAD6C900FB965F /* Triangle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Triangle.swift; sourceTree = "<group>"; };
 		BAC3160C28BAD6D800FB965F /* Diamond.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Diamond.swift; sourceTree = "<group>"; };
-		BAC3160E28BADB0800FB965F /* CardContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardContent.swift; sourceTree = "<group>"; };
+		BAC3160E28BADB0800FB965F /* SetCardContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetCardContent.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,7 +73,7 @@
 				BAC315F528BA985F00FB965F /* ContentView.swift */,
 				BAC315F728BA986300FB965F /* Assets.xcassets */,
 				BAC315F928BA986300FB965F /* Preview Content */,
-				BAC3160E28BADB0800FB965F /* CardContent.swift */,
+				BAC3160E28BADB0800FB965F /* SetCardContent.swift */,
 			);
 			path = Set;
 			sourceTree = "<group>";
@@ -172,7 +172,7 @@
 				BAC3160928BAD6BB00FB965F /* Rectangle.swift in Sources */,
 				BAC3160D28BAD6D800FB965F /* Diamond.swift in Sources */,
 				BAC315F428BA985F00FB965F /* SetApp.swift in Sources */,
-				BAC3160F28BADB0800FB965F /* CardContent.swift in Sources */,
+				BAC3160F28BADB0800FB965F /* SetCardContent.swift in Sources */,
 				BAC3160B28BAD6C900FB965F /* Triangle.swift in Sources */,
 				BAC3160228BAA0EF00FB965F /* AspectVGrid.swift in Sources */,
 			);
