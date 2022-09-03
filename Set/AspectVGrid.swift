@@ -16,6 +16,11 @@ struct AspectVGrid<Item, ItemView>: View where ItemView:View, Item: Identifiable
         self.items = items
         self.aspectRatio = aspectRatio
         self.content = content
+        let ids = items.map { $0.id }
+        print("IDS")
+        for i in ids {
+            print(i)
+        }
     }
     
     var body: some View {
@@ -43,6 +48,13 @@ struct AspectVGrid<Item, ItemView>: View where ItemView:View, Item: Identifiable
     private func widthThatFits(itemCount: Int, in size: CGSize, itemAspectRatio: CGFloat) -> CGFloat {
         var columnCount = 1
         var rowCount = itemCount
+        var maxColumns: Int {
+            if UIDevice.current.orientation.isLandscape {
+                return 12
+            }
+            return 6
+        }
+        
         repeat {
             let itemWidth = size.width / CGFloat(columnCount)
             let itemHeight = itemWidth / itemAspectRatio
@@ -51,7 +63,7 @@ struct AspectVGrid<Item, ItemView>: View where ItemView:View, Item: Identifiable
             }
             columnCount += 1
             rowCount = (itemCount + (columnCount - 1)) / columnCount
-        } while columnCount < itemCount && columnCount < 5
+        } while columnCount < itemCount && columnCount < maxColumns
         if columnCount > itemCount {
             columnCount = itemCount
         }
