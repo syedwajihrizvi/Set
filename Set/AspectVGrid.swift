@@ -16,11 +16,6 @@ struct AspectVGrid<Item, ItemView>: View where ItemView:View, Item: Identifiable
         self.items = items
         self.aspectRatio = aspectRatio
         self.content = content
-        let ids = items.map { $0.id }
-        print("IDS")
-        for i in ids {
-            print(i)
-        }
     }
     
     var body: some View {
