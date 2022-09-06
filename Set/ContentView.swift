@@ -68,17 +68,17 @@ struct CardView: View {
     var body: some View {
         GeometryReader(content: { geometry in
             ZStack(alignment: .center, content:  {
-                let shape = RoundedRectangle(cornerRadius: 10)
+                let shape = RoundedRectangle(cornerRadius: DrawingConstants.cornerRadius)
                     shape.fill().foregroundColor(.white)
                     if card.isMatch {
-                        shape.strokeBorder(lineWidth: 8)
+                        shape.strokeBorder(lineWidth: DrawingConstants.matchedCardBorderWidth)
                             .foregroundColor(.purple)
                     }
                     else if card.isSelected {
-                        shape.strokeBorder(lineWidth: 5)
+                        shape.strokeBorder(lineWidth: DrawingConstants.selectedCardBorderWidth)
                             .foregroundColor(.pink)
                     } else {
-                        shape.strokeBorder(lineWidth: 3)
+                        shape.strokeBorder(lineWidth: DrawingConstants.lineWidth)
                             .foregroundColor(.black)
                     }
                     HStack {
@@ -134,7 +134,7 @@ struct CardView: View {
         case "triangle":
             return CGFloat(size.width*DrawingConstants.triangleSpacerWidth)
         default:
-            return 0.25
+            return DrawingConstants.defaultSpacerDistance
         }
     }
     
@@ -142,11 +142,14 @@ struct CardView: View {
         static let cornerRadius: CGFloat = 10
         static let lineWidth: CGFloat = 3
         static let fontScale: CGFloat = 0.70
+        static let matchedCardBorderWidth: CGFloat = 8
+        static let selectedCardBorderWidth: CGFloat = 5
         static let rectangleWidthToCardWidth: CGFloat = 0.65
         static let rectangleSpacerWidth: CGFloat = 0.175
         static let diamondWidthToCardWidth: CGFloat = 0.4
         static let diamondSpacerWidth: CGFloat = 0.3
         static let triangleWidthToCardWidth: CGFloat = 0.35
         static let triangleSpacerWidth: CGFloat = 0.275
+        static let defaultSpacerDistance: CGFloat = 0.25
     }
 }

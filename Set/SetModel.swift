@@ -9,16 +9,13 @@ import Foundation
 
 struct SetModel<CardContent> {
     private(set) var deck: Array<Card>
-    private(set) var chosenCardCount: Int = 0
     private(set) var dealedCards: Array<Card>
     private(set) var chosenCards: Array<Card>
     private(set) var score: Int = 0
     
     private var currentDeckCard: Int = 0
-    private(set) var wasLastGroupSet: Bool = false
     
     mutating func choose(card: Card) {
-        print(dealedCards)
         if let chosenCardIndex = dealedCards.firstIndex(where: { $0.id == card.id }) {
             // If chosen card count is less than 3, either add to chosenCards, or remove
             if chosenCards.count < 3 {
@@ -29,28 +26,19 @@ struct SetModel<CardContent> {
                     dealedCards[chosenCardIndex].isSelected.toggle()
                     chosenCards.append(dealedCards[chosenCardIndex])
                 }
-                print("Less than 3")
             }
             // If the chosen card count is equal to 3, see if matching set
             else {
                 let setEval = isSet()
-                print(setEval)
                 if (setEval.0) {
-                    print("Is a valid set")
                     if currentDeckCard < 81 {
                         // Replace matched cards with 3 new cards from the deck
                         for card in chosenCards {
                             if let indexOfMatchedChosenCard = dealedCards.firstIndex(where: { $0.id == card.id }) {
                                 let cardFromDeck = deck[currentDeckCard]
-                                print("New Card")
-                                print(cardFromDeck)
-                                print("Removed Card")
-                                print(dealedCards[indexOfMatchedChosenCard])
-                                print(" ")
                                 dealedCards[indexOfMatchedChosenCard] = cardFromDeck
                             }
                             currentDeckCard += 1
-                            print(currentDeckCard)
                         }
                     } else {
                         // If deck empty, remove the 3 matched cards from the table

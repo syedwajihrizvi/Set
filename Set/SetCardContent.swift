@@ -46,10 +46,4 @@ struct SetCardContent: Equatable {
         return (false, sameFeatures)
     }
     
-    static func == (lhs: SetCardContent, rhs: SetCardContent) -> Bool {
-        return lhs.shape == rhs.shape &&
-        lhs.number == rhs.number &&
-        lhs.shading == rhs.shading &&
-        lhs.color == rhs.color
-    }
 }
